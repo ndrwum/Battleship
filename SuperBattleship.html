@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>A2 Andrew Um</title>
+    <script src="http://www.cs.unc.edu/Courses/comp426-f16/jquery-3.1.0.js"></script>
+    <script type="text/javascript" src="http://www.cs.unc.edu/Courses/comp426-f16/kmp/SuperBattleship/SBConstants.js"></script>
+    <script type="text/javascript" src="http://www.cs.unc.edu/Courses/comp426-f16/kmp/SuperBattleship/SuperBattleship.js"></script>
+    <script type="text/javascript" src="SBStart.js"></script>
+    <script type="text/javascript" src="SBGUI.js"></script>
+    <script type="text/javascript" src="http://www.cs.unc.edu/Courses/comp426-f16/kmp/SuperBattleship/DumbAI.js"></script>
+    <link rel="stylesheet" type="text/css" href="SBcss.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <table id="mapTable"></table>
+    <div id="cli_panel">
+        <h1 style="color:white;">Super Battleship</h1>
+        <div id="shipInfo">
+            <h3><u>Player Ship Info</u></h3>
+            <div class="Carrier info">
+                <h5>Carrier: &nbsp;</h5>
+                <p class="position">Position:</p>
+                <p class="direction">Direction:</p>
+                <p class="length">Length:</p>
+                <p class="status">Status:</p>
+            </div>
+            <div class="Battleship info">
+                <h5>Battleship: &nbsp;</h5>
+                <p class="position">Position:</p>
+                <p class="direction">Direction:</p>
+                <p class="length">Length:</p>
+                <p class="status">Status:</p>
+            </div>
+            <div class="Cruiser info">
+                <h5>Cruiser: &nbsp;</h5>
+                <p class="position">Position:</p>
+                <p class="direction">Direction:</p>
+                <p class="length">Length:</p>
+                <p class="status">Status:</p>
+            </div>
+            <div class="Submarine info">
+                <h5>Submarine: &nbsp;</h5>
+                <p class="position">Position:</p>
+                <p class="direction">Direction:</p>
+                <p class="length">Length:</p>
+                <p class="status">Status:</p>
+            </div>
+            <div class="Destroyer info">
+                <h5>Destroyer: &nbsp;</h5>
+                <p class="position">Position:</p>
+                <p class="direction">Direction:</p>
+                <p class="length">Length:</p>
+                <p class="status">Status:</p>
+            </div>
+        </div>
+        <div class="selecter col-xs-50">
+            <p> Move:
+                <select class="form-control" id="moveShip">
+                    <option value="Carrier"> Carrier</option>
+                    <option value="Battleship"> Battleship</option>
+                    <option value="Cruiser"> Cruiser</option>
+                    <option value="Submarine">Submarine</option>
+                    <option value="Destroyer">Destroyer</option>
+                </select>
+                <select class="form-control" id="moveSelect">
+                    <option value="forward">Forward</option>
+                    <option value="backward">Backward</option>
+                </select>
+                <input class='btn btn-primary' type="submit" id="moveSubmit" value="Move!"> </p>
+            <p> Rotate:
+                <select class="form-control" id="rotateShip">
+                    <option value="Carrier"> Carrier</option>
+                    <option value="Battleship">Battleship</option>
+                    <option value="Cruiser"> Cruiser</option>
+                    <option value="Submarine">Submarine</option>
+                    <option value="Destroyer">Destroyer</option>
+                </select>
+                <select class="form-control" id="rotateSelect">
+                    <option value="CW">Clockwise</option>
+                    <option value="CCW">Counterclockwise</option>
+                </select>
+                <input class='btn btn-success' type="submit" id="rotateSubmit" value="Rotate!"> </p>
+        </div>
+        <h3>Event Log</h3>
+        <div class="panel-body" id="cli_output"> </div>
+    </div>
+</body>
+<iframe width="0" height="0" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/127811275&amp;auto_play=true&amp" frameborder="0"></iframe>
+
+</html>
